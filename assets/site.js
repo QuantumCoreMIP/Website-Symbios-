@@ -48,6 +48,42 @@
     });
   }
 
+  /* ---------- hero slider (live: Royal Slider — fade 1s, autoplay 3s, loop) ---------- */
+  var slides = document.querySelectorAll('.hero-slides .hero-slide');
+  if (slides.length > 1 && !reduced) {
+    var current = 0;
+    setInterval(function () {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  }
+
+  /* ---------- View Bio popups (live: w-popup modals on team cards) ---------- */
+  document.querySelectorAll('.view-bio').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = btn.closest('.card');
+      var img = card.querySelector('img');
+      var name = card.querySelector('h4');
+      var role = card.querySelector('.card-body p');
+      var bio = card.querySelector('.bio-popup');
+      var overlay = document.createElement('div');
+      overlay.className = 'bio-modal-overlay';
+      overlay.innerHTML = '<div class="bio-modal" role="dialog" aria-modal="true">' +
+        '<button class="bio-close" aria-label="Close">&times;</button>' +
+        (img ? '<img src="' + img.src + '" alt="">' : '') +
+        '<h4>' + (name ? name.innerHTML : '') + '</h4>' +
+        '<p class="bio-role">' + (role ? role.textContent : '') + '</p>' +
+        '<div class="bio-text">' + (bio ? bio.innerHTML : '') + '</div></div>';
+      var close = function () { overlay.remove(); document.removeEventListener('keydown', onKey); };
+      var onKey = function (e) { if (e.key === 'Escape') close(); };
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+      overlay.querySelector('.bio-close').addEventListener('click', close);
+      document.addEventListener('keydown', onKey);
+      document.body.appendChild(overlay);
+    });
+  });
+
   /* ---------- back to top (live: .w-toplink with arrow-up) ---------- */
   var top = document.createElement('a');
   top.className = 'toplink';

@@ -4,6 +4,7 @@
 
 ## Just completed
 - Full static rebuild of mysymbios.com + all 4 sub-brand sites (44 pages), pushed to GitHub `main`
+- Primary Care final pass merged: full 6-item services nav on all pages, men's health treatment links restored (link check clean)
 - "SymbiosEdge / The Edge" rebranded to **Symbios Fit** throughout (text lockup logo, `/fit/` section, "Edge Rx" → "Fit Rx")
 - All internal links verified (0 broken); per-brand phone numbers and CTAs verified against live site
 

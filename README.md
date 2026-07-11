@@ -24,7 +24,7 @@ Campus: 460 William Hilton Parkway, Hilton Head Island, SC 29926
 Patient portal: https://25915.portal.athenahealth.com/
 
 ## Outstanding items (flagged in HTML comments in the pages)
-- New **Symbios Fit logo asset** needed — pages currently use a styled text lockup
+- Symbios Fit logo: derived from the original Edge logo (assets/symbiosfit_tagline.png, transparent bg; _nocheck variant available) — "Fit" set in Allura script matched to the original color/size. Client should confirm or supply an official vector version
 - Social profiles still carry The Edge handles (facebook 61578321875531, instagram @theedgebysymbioshealth, linkedin the-edge-by-symbios-health)
 - "Edge Rx" renamed to "Fit Rx" and "The Mobility Edge" program name kept — confirm with client
 - Forms are static (`action="#"`) — need a form handler (live site uses WordPress forms)

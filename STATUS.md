@@ -3,6 +3,7 @@
 **Date:** 2026-07-11
 
 ## Just completed
+- Symbios Fit logo created from the client's original Edge logo (same icon, wordmark, tagline, colors; "Fit" in matching script) and applied to all 16 pages that used the text lockup
 - Full static rebuild of mysymbios.com + all 4 sub-brand sites (44 pages), pushed to GitHub `main`
 - Primary Care final pass merged: full 6-item services nav on all pages, men's health treatment links restored (link check clean)
 - "SymbiosEdge / The Edge" rebranded to **Symbios Fit** throughout (text lockup logo, `/fit/` section, "Edge Rx" → "Fit Rx")

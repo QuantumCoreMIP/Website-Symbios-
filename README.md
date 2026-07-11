@@ -28,6 +28,7 @@ Patient portal: https://25915.portal.athenahealth.com/
 - Symbios Fit logo: derived from the original Edge logo (assets/symbiosfit_tagline.png, transparent bg; _nocheck variant available) — "Fit" set in Allura script matched to the original color/size. Client should confirm or supply an official vector version
 - Social profiles still carry The Edge handles (facebook 61578321875531, instagram @theedgebysymbioshealth, linkedin the-edge-by-symbios-health)
 - "Edge Rx" renamed to "Fit Rx" and "The Mobility Edge" program name kept — confirm with client
-- Forms are static (`action="#"`) — need a form handler (live site uses WordPress forms)
-- Blog: page 1 posts carded (linking to live posts); pages 2–17 not migrated
-- Careers "open positions" embed and email-signup embed were not extractable from the live site
+- Forms use the client's live ActiveCampaign embeds (mysymbios820.activehosted.com — ids 3/15/20/21) and careers uses the live Dover job-board iframe; confirm those accounts stay active through launch
+- Blog: page 1 posts carded (linking to live posts); pages 2–17 not migrated; ED post's category sidebar not rebuilt
+- Sexual Health: 4 women's treatment tiles (FemiLift, O-Shot, Alma Duo Enhanced Sexual Function, PRP Wing Lift) link to live pages not yet migrated
+- Not carried over pending client decision: UserWay accessibility widget, GA4 analytics tag, header search overlay

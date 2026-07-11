@@ -27,7 +27,7 @@
 - Nothing in flight
 
 ## Next steps
-- Client review of flagged items (see README "Outstanding items"): Fit logo asset, Fit social handles, "Fit Rx" / "The Mobility Edge" naming, past-dated webinar on advanced-ed-solutions page
-- Wire the static forms to a handler
-- Decide hosting/domain for Fit (fit.mysymbios.com) and DNS cutover plan
+- Client review of flagged items (see README "Outstanding items"): Fit logo asset, Fit social handles, "Fit Rx" / "The Mobility Edge" naming, past-dated webinar on advanced-ed-solutions page, and whether to carry over UserWay / GA4 / header search / blog pagination
+- Migrate the 4 women's sexual-health treatment pages (FemiLift, O-Shot, Alma Duo for Enhanced Sexual Function, PRP Wing Lift) — tiles currently link to the live site
+- Decide hosting/domain for Fit (fit.mysymbios.com) and DNS cutover plan; forms now use the client's ActiveCampaign embeds, so no separate form backend is needed
 - athenahealth API: if pursuing integration, register at developer portal (Preview sandbox is self-service; production needs practice authorization + BAA)

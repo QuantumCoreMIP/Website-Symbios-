@@ -3,6 +3,10 @@
 Static rebuild of mysymbios.com and its sub-brand sites, with the former
 "SymbiosEdge / The Edge" brand renamed to **Symbios Fit**.
 
+## Hosting
+Deployed as a static site on Render. Clean URLs: every page lives in its own folder
+(`about-us/index.html` → `/about-us/`); all internal links are root-absolute with no `.html`.
+
 ## Structure
 - `/` — main Symbios Health site (home, about, blog listing, appointment, careers, privacy, email signup, advanced ED solutions)
 - `/fit/` — Symbios Fit (formerly theedge.mysymbios.com), 11 pages

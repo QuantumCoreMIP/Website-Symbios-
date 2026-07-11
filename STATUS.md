@@ -3,6 +3,8 @@
 **Date:** 2026-07-11
 
 ## Just completed
+- Clean URLs for Render hosting: all 39 non-index pages moved to `slug/index.html` folders, every internal link/asset/background rewritten to root-absolute paths with no `.html` (e.g. `/primary-care/mens-health/`); verified all 44 clean URLs + assets resolve locally
+- Root `favicon.ico` added (from the Symbios icon) alongside the per-brand `<link rel="icon">` tags
 - Detailed 44-page parity pass against the live sites (5 parallel audits + fixes):
   - Header corrected to live spec: cream 41px topbar, WHITE 120px nav row, 80px logo, cream dropdowns w/ brand hover; body type 17px/26px
   - Rotating hero sliders on all 5 homepages (Royal Slider timing: 1s fade / 3s autoplay); Google Maps section added to the 4 sub-brand homepages

@@ -1,5 +1,5 @@
-# Staging: blocked from indexing until domain cutover.
-# At launch on www.mysymbios.com: change "Disallow: /" to "Allow: /"
+# Staging: indexing blocked until the domain cutover to www.mysymbios.com.
+# AT LAUNCH: change "Disallow: /" to "Allow: /" (one line, nothing else needed).
 User-agent: *
 Disallow: /
 

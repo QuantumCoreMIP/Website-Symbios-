@@ -4,6 +4,7 @@
 
 ## Just completed
 ## 2026-07-12 — brand-consistency + SEO round
+- Cross-brand navigation: persistent dark campus-switcher bar on all 46 pages (current brand highlighted); "Our Brands" renamed "Our Campus" in nav and section headings
 - Fixed 1,328 doubled-quote attribute bugs left by the clean-URL rewrite (44 files)
 - Rebuilt Symbios Health logo script word "Health" in Yellowtail to match Therapy/Care (assets/symbioshealth_tagline.png, 21 refs updated)
 - Footers: brand name above address + brand-matched copyrights (SymbiosAria/SymbiosFit/PrimaryCare/PhysioTherapy by Symbios Health)

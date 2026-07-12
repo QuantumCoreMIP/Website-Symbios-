@@ -1,0 +1,6 @@
+# Staging: blocked from indexing until domain cutover.
+# At launch on www.mysymbios.com: change "Disallow: /" to "Allow: /"
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.mysymbios.com/sitemap.xml

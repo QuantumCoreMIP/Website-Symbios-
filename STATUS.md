@@ -1,8 +1,16 @@
 # Project Status — Symbios Site Rebuild
 
-**Date:** 2026-07-11
+**Date:** 2026-07-12
 
 ## Just completed
+## 2026-07-12 — brand-consistency + SEO round
+- Fixed 1,328 doubled-quote attribute bugs left by the clean-URL rewrite (44 files)
+- Rebuilt Symbios Health logo script word "Health" in Yellowtail to match Therapy/Care (assets/symbioshealth_tagline.png, 21 refs updated)
+- Footers: brand name above address + brand-matched copyrights (SymbiosAria/SymbiosFit/PrimaryCare/PhysioTherapy by Symbios Health)
+- Removed the Home nav item on all pages (logo is the home link)
+- Aria-branded /medspa/about-us/ and /medspa/request-a-consultation/ (live med spa content, cyan Aria scheme); all med spa CTAs now stay in-brand
+- SEO: per-brand LocalBusiness JSON-LD on the 5 index pages, sitemap.xml (46 URLs), robots.txt (staging-blocked until cutover), 3 NAP phone fixes; full audit in SEO-REVIEW.md
+
 - Clean URLs for Render hosting: all 39 non-index pages moved to `slug/index.html` folders, every internal link/asset/background rewritten to root-absolute paths with no `.html` (e.g. `/primary-care/mens-health/`); verified all 44 clean URLs + assets resolve locally
 - Root `favicon.ico` added (from the Symbios icon) alongside the per-brand `<link rel="icon">` tags
 - Detailed 44-page parity pass against the live sites (5 parallel audits + fixes):

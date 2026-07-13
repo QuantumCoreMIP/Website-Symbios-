@@ -3,6 +3,7 @@
 **Date:** 2026-07-13
 
 ## 2026-07-13 — PrimaryCare consultation + copy fix
+- Added ToDoList.md (SymbiosFit hours tabled there per client), branded 404.html (Render serves it automatically), and REDIRECTS.md — full 301 map for old subdomain + www URLs ready for Cloudflare/Render at cutover
 - SymbiosFit real address applied (Port Royal Plaza, 95 Mathews Dr, Suite D3): all 11 fit footers, fit homepage map embed, fit JSON-LD (stale campus geo dropped), gateway door card + department schema, llms.txt
 - PrimaryCare now has its own green-branded /primary-care/request-a-consultation/ (form, hours, new-patient-forms link); all 10 PrimaryCare pages retargeted off the SymbiosHealth form
 - Gateway and llms.txt: removed "one address" claim (SymbiosFit has a nearby satellite space); sitemap regenerated (47 URLs)

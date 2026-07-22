@@ -2,6 +2,11 @@
 
 **Date:** 2026-07-18
 
+## 2026-07-18 — header logo sizing + dropdown animation
+- **Logo sizing corrected to the live spec.** The live sites size each lockup so every brand's header logo lands at ~322px wide: main site 80px tall (430x107 source), sub-brands 100px (345x107) at >=1381px, 80px below. The rebuild used a flat 80px everywhere, which made the wider SymbiosHealth lockup render 321x80 vs 258x80 for the others — reading ~24% larger. Now verified at 1500px: Health 321w, PrimaryCare/PhysioTherapy/SymbiosFit 322w, SymbiosAria 336w.
+- **Nav dropdowns now unroll** like the live nav (Impreza `dropdown_height`): `scaleY(0)->1` from the top edge + opacity fade, .3s. Replaces the instant `display:none/block`. Added `:focus-within` for keyboard users, a `prefers-reduced-motion` opt-out, and a transform reset for the mobile stacked menu.
+- Not exercised live: the hover animation itself couldn't be triggered in the automation context (Browser pane wasn't compositing, so pseudo-classes/style recalc are frozen). Resting state and rule matching were verified programmatically; **worth a quick eyeball in a real browser.**
+
 ## 2026-07-18 — SymbiosFit phone correction
 - **Client correction: SymbiosFit line is (843) 738-4600, not 4604.** Updated all 57 occurrences site-wide — topbars/footers on the 11 fit pages, every `tel:` link, the homepage LocalBusiness department schema, llms.txt, README, SITE-SPEC, SEO-REVIEW — so NAP stays consistent. Verified 0 stale `4604` remain.
 - Removed the Port Royal Plaza address from the SymbiosFit card in the homepage "Where Would You Like to Start?" grid so all four campus cards match. The satellite address intentionally remains in the /fit/ footers, fit map embed, and JSON-LD.

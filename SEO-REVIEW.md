@@ -30,7 +30,7 @@ Performance is acceptable (16 MB total assets, only 3 files >300 KB) but no lazy
 | 2 | Migrate or 301 the 16 blog posts linked from `/blog/` — they point at `www.mysymbios.com/<slug>/` and will 404 post-launch | **High** | Med | e.g. `/the-real-story-on-glp-1-medications…/`, `/cholesterol-metabolic-health-heart-risk/` |
 | 3 | Noindex the Render staging URL (`X-Robots-Tag: noindex` or conditional robots.txt) until DNS cutover | **High** | Low | `robots.txt` currently says `Allow: /` — correct for prod, dangerous on `*.onrender.com` |
 | 4 | Add `<link rel="canonical">` to all 46 pages | **High** | Low | Currently 0/46. Absolute URLs on `https://www.mysymbios.com` |
-| 5 | Create 4 separate Google Business Profiles (one per brand) + keep/claim the Symbios Health parent | **High** | Med | Full plan below. Distinct phones already exist (4800/4604/4300/4000) |
+| 5 | Create 4 separate Google Business Profiles (one per brand) + keep/claim the Symbios Health parent | **High** | Med | Full plan below. Distinct phones already exist (4800/4600/4300/4000) |
 | 6 | Fix homepage title (`Home – Symbios Health`) and normalize physiotherapy brand-first titles to keyword-first | **High** | Low | Details in §1 |
 | 7 | Fix 3 wrong/inconsistent phone instances (fit consult page, physio appointments page, dotted format on advanced-ed page) | **Med** | Low | Details in §6 |
 | 8 | Add BreadcrumbList JSON-LD + FAQPage on treatment pages with FAQ sections + MedicalWebPage on service pages | **Med** | Med | LocalBusiness on 5 indexes already in progress |
@@ -115,14 +115,14 @@ Performance is acceptable (16 MB total assets, only 3 files >300 KB) but no lazy
 | Brand | Correct number | Status |
 |---|---|---|
 | Symbios Health (root) | 843-738-4800 | Consistent (root pages also correctly reference the four brand lines) |
-| Symbios Fit | 843-738-4604 | 22 of 23 tel links correct — **exception below** |
+| Symbios Fit | 843-738-4600 | 22 of 23 tel links correct — **exception below** |
 | Primary Care | 843-738-4800 | Fully consistent (20/20) |
 | Physio Therapy | 843-738-4300 | 18 of 19 correct — **exception below** |
 | Symbios Aria (medspa) | 843-738-4000 | Fully consistent (17/17) |
 
 Exceptions found:
 
-1. **`fit/request-a-consultation/index.html` line 72:** "Call `tel:+18437384800` 843-738-4800" — the Fit consultation page uses the main campus line, and its meta description repeats it ("Call 843-738-4800"). If the live Edge site used 4800 here this may be intentional, but every other Fit page (including its own topbar) says 843-738-4604. Confirm with client; make consistent either way.
+1. **`fit/request-a-consultation/index.html` line 72:** "Call `tel:+18437384800` 843-738-4800" — the Fit consultation page uses the main campus line, and its meta description repeats it ("Call 843-738-4800"). If the live Edge site used 4800 here this may be intentional, but every other Fit page (including its own topbar) says 843-738-4600. Confirm with client; make consistent either way.
 2. **`physiotherapy/appointments/index.html` line 69:** same pattern — body copy says 843-738-4800 while the page's own topbar/footer say 843-738-4300.
 3. **`advanced-ed-solutions/index.html` line 103:** dotted format `843.738.4800` — the only dotted instance on the site. Normalize.
 
@@ -191,7 +191,7 @@ Google explicitly allows multiple Business Profiles at a single address **when t
 | Symbios Health | 843-738-4800 | Medical clinic | Wellness center, Medical office | `https://www.mysymbios.com/` |
 | Symbios Primary Care | 843-738-4800* | Medical clinic | Family practice physician, Internist, Men's health physician, Women's health clinic | `/primary-care/` |
 | Symbios Physio Therapy | 843-738-4300 | Physical therapy clinic | Physical therapist, Sports medicine clinic | `/physiotherapy/` |
-| Symbios Fit | 843-738-4604 | Gym | Personal trainer, Weight loss service, Fitness center | `/fit/` |
+| Symbios Fit | 843-738-4600 | Gym | Personal trainer, Weight loss service, Fitness center | `/fit/` |
 | Symbios Aria Med Spa | 843-738-4000 | Medical spa | Skin care clinic, Facial spa, Laser hair removal service (if offered) | `/medspa/` |
 
 *The shared 4800 line between the parent and Primary Care is the one friction point — Google's duplicate detection keys heavily on name+address+phone. **Options:** (a) provision a distinct DID for Primary Care (cleanest), or (b) treat Primary Care as the parent profile's core identity and skip a separate Primary Care profile (4 profiles instead of 5), or (c) proceed with both and be prepared to appeal — distinct names and categories usually suffice, but expect a review. Recommend (a).*

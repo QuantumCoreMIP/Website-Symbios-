@@ -52,7 +52,7 @@ Sub-sites (primary-care, physiotherapy, medspa): their `/request-a-consultation/
 ## Contact info (verified from live site)
 - Campus address (all brands): 460 William Hilton Parkway, Hilton Head Island, SC 29926
 - Main / Symbios Health: 843-738-4800
-- Symbios Fit (was Edge): (843) 738-4604
+- Symbios Fit (was Edge): (843) 738-4600
 - Other sub-sites: use the tel: number found in THEIR OWN .txt files; if none, use 843-738-4800
 - Patient Portal: https://25915.portal.athenahealth.com/
 - Hours (from request-a-consultation page): Mon–Thu 8:00 AM–4:30 PM, Fri 8:00 AM–4:00 PM, Sat–Sun closed

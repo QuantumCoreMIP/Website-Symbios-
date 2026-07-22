@@ -20,7 +20,7 @@ Deployed as a static site on Render. Clean URLs: every page lives in its own fol
 | Brand | Phone |
 |---|---|
 | Symbios Health (main) | 843-738-4800 |
-| Symbios Fit | 843-738-4604 |
+| Symbios Fit | 843-738-4600 |
 | Physio Therapy | 843-738-4300 |
 | Symbios Aria (med spa) | 843-738-4000 |
 | Primary Care | 843-738-4800 |

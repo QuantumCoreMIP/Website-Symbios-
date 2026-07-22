@@ -2,6 +2,12 @@
 
 **Date:** 2026-07-18
 
+## 2026-07-18 — SymbiosHealth logo sizing, rest of site
+- Audited every SymbiosHealth lockup instance (25 across 15 files): **header** (9), **footer** (9), **brand strip** (6), **intro animation** (1).
+- **Brand strips fixed** — the one place the Health lockup sits beside the sub-brand lockups. `max-height:80px` rendered it 321px wide vs 258px for the others (same 430x107 vs 345x107 aspect cause as the header). Live constrains brand logos by `max-width` instead, so switched to `max-width:260px`. Every strip logo is now a uniform 260px wide (heights vary by aspect, as on live).
+- **Header** (80px main / 100px sub-brand, all ~322px wide) and **footer** (`max-width:220px`, already identical to live's rule) were already correct — unchanged.
+- Verified across 13 pages: header 321x80 on root pages, 322x100 sub-brands (Aria 336x100); strips uniform 260px; footers uniform 220px.
+
 ## 2026-07-18 — dropdown typography
 - Dropdown links now match the top-level nav exactly: **13px / weight 500 / uppercase / .05em** (were .9rem, mixed case, weight 300 inherited from body). Live styles the whole menu as one unit so both levels share type; the rebuild had only styled level 1. Verified identical computed type on the main site and sub-brands.
 - **Open decision:** uppercasing makes the one-word brand names read `PRIMARYCARE` / `PHYSIOTHERAPY` / `SYMBIOSFIT` / `SYMBIOSARIA` (live showed two words: "PRIMARY CARE"). Consistent with the client's one-word directive, but the camelCase readability cue is lost — confirm with client.

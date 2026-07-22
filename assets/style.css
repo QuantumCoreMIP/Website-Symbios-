@@ -151,7 +151,9 @@ nav.main-nav a.nav-link:hover { color: var(--brand); }
 .nav-item:hover .dropdown,
 .nav-item:focus-within .dropdown { visibility: visible; opacity: 1; transform: scaleY(1) translateZ(0); }
 @media (prefers-reduced-motion: reduce) { .dropdown { transition: none; } }
-.dropdown a { display: block; padding: 9px 18px; font-size: .9rem; color: var(--color-header-text); }
+/* Dropdown items use the same type as the top-level nav (live styles the whole
+   menu as one: uppercase, letter-spaced, same size/weight at both levels) */
+.dropdown a { display: block; padding: 9px 18px; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .05em; color: var(--color-header-text); }
 .dropdown a:hover { color: var(--brand); }
 .menu-toggle { display: none; }
 

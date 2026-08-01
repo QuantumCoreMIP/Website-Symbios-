@@ -2,10 +2,12 @@
 
 **Date:** 2026-08-01
 
-## 2026-08-01 — robots.txt temporarily opened for reception.ai crawl
-- **Diagnosis confirmed:** the reception.ai crawl stalled after reading only the title/meta because the Render staging `robots.txt` served `Disallow: /`. reception.ai respects robots, so it never fetched past the root document.
-- **Flipped `Disallow: /` -> `Allow: /`** and pushed to `main` (commit `9aa8d92`) so Render redeploys and the crawl can complete. Risk is low: the staging URL isn't linked or submitted anywhere, and the sitemap directive already points at `www.mysymbios.com`, so Google isn't crawling the Render host.
-- Verified robots.txt is the **only** blocker — no `X-Robots-Tag` header config in the repo, and `noindex` appears only in `404.html` (intentional) and `SEO-REVIEW.md` (docs).
+## 2026-08-01 — reception.ai crawl unblocked (robots.txt + sitemap, BOTH TEMPORARY)
+- **Root cause was misdirection, not exclusion.** The first theory (staging `robots.txt` serving `Disallow: /`) was wrong — flipping it to `Allow: /` (`9aa8d92`) changed nothing; the crawl still returned title/meta only. Render *did* redeploy, and `symbios.onrender.com` serves 200s with no anti-bot layer.
+- **Actual chain:** crawler reads the root fine, then follows `Sitemap: https://www.mysymbios.com/sitemap.xml` -> 301 -> the old WordPress Yoast sitemap index. All 47 `<loc>` entries in our own `sitemap.xml` also pointed at `www.mysymbios.com`. **That host sits behind a Cloudflare challenge** (returns HTTP 200 with an "Attention Required!" interstitial, so status checks look healthy). Every URL the crawler discovered was unreadable, so it gave up after the root document.
+- **Fix (`6572e19`):** repointed the `Sitemap:` directive and all 47 `<loc>` entries at `symbios.onrender.com`. Staging subpages verified serving real content — `/about-us/` 16KB, `/primary-care/` 13.6KB, `/physiotherapy/` 13.4KB, `/fit/` 12.9KB, `/medspa/` 13.7KB.
+- Ruled out: no `canonical` or `og:url` tags on any of the 48 pages; no `X-Robots-Tag` header config; `noindex` only in `404.html` (intentional) and `SEO-REVIEW.md` (docs).
+- **Flagged for later:** the intro overlay is opaque, `z-index:9999`, and scroll-locks the page for ~10.4s. Content sits beneath it in the DOM (4,323 chars of `innerText`), so text extractors are fine, but any **screenshot-based** crawler or preview bot will capture a blank cream screen. Worth a `prefers-reduced-motion`-style bailout for bot user agents before launch.
 - Repo re-cloned fresh to `C:\dev\Website-Symbios-` from `github.com/QuantumCoreMIP/Website-Symbios-`.
 
 ## 2026-07-18 — SymbiosHealth logo sizing, rest of site
@@ -80,10 +82,14 @@
 - All internal links verified (0 broken); per-brand phone numbers and CTAs verified against live site
 
 ## In progress
-- **robots.txt is temporarily open (`Allow: /`) on staging.** Waiting on the reception.ai crawl to finish, then it must be reverted to `Disallow: /`.
+- **Two temporary staging changes are live**, both pending the reception.ai crawl finishing:
+  1. `robots.txt` -> `Allow: /` (was `Disallow: /`)
+  2. `robots.txt` `Sitemap:` directive + all 47 `sitemap.xml` `<loc>` entries -> `symbios.onrender.com` (were `www.mysymbios.com`)
 
 ## Next steps
-- **REVERT robots.txt to `Disallow: /`** as soon as the reception.ai crawl completes — staging stays blocked until the domain cutover
+- **REVERT BOTH temporary changes in one commit** as soon as the crawl completes: robots back to `Disallow: /`, and every URL back to `https://www.mysymbios.com/`. Staging stays blocked until cutover, and the www URLs are the correct ones at launch.
+- Before launch: give the intro overlay a bot bailout so screenshot-based crawlers and link-preview bots don't capture a blank cream screen
+- Note for cutover: `www.mysymbios.com` is behind a Cloudflare challenge that returns HTTP 200 with an interstitial body — any crawler or uptime check pointed at it will silently get a block page
 - Client review of flagged items (see README "Outstanding items"): Fit logo asset, Fit social handles, "Fit Rx" / "The Mobility Edge" naming, past-dated webinar on advanced-ed-solutions page, and whether to carry over UserWay / GA4 / header search / blog pagination
 - Migrate the 4 women's sexual-health treatment pages (FemiLift, O-Shot, Alma Duo for Enhanced Sexual Function, PRP Wing Lift) — tiles currently link to the live site
 - Decide hosting/domain for Fit (fit.mysymbios.com) and DNS cutover plan; forms now use the client's ActiveCampaign embeds, so no separate form backend is needed

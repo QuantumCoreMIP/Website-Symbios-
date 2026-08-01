@@ -1,7 +1,11 @@
-# TEMPORARY: opened for a one-off reception.ai crawl. REVERT to "Disallow: /"
-# as soon as the crawl finishes -- staging must stay blocked until cutover.
+# TEMPORARY (2026-08-01): opened for a one-off reception.ai crawl.
+# REVERT BOTH as soon as the crawl finishes:
+#   1. this file  -> "Allow: /" back to "Disallow: /"
+#      and the Sitemap: line back to https://www.mysymbios.com/sitemap.xml
+#   2. sitemap.xml -> all 47 <loc> back to https://www.mysymbios.com/
+# Staging must stay blocked, and the www URLs are the correct ones at launch.
 # AT LAUNCH: change "Disallow: /" to "Allow: /" (one line, nothing else needed).
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mysymbios.com/sitemap.xml
+Sitemap: https://symbios.onrender.com/sitemap.xml

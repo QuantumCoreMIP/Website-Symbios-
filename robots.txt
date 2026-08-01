@@ -1,6 +1,7 @@
-# Staging: indexing blocked until the domain cutover to www.mysymbios.com.
+# TEMPORARY: opened for a one-off reception.ai crawl. REVERT to "Disallow: /"
+# as soon as the crawl finishes -- staging must stay blocked until cutover.
 # AT LAUNCH: change "Disallow: /" to "Allow: /" (one line, nothing else needed).
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://www.mysymbios.com/sitemap.xml

@@ -1,6 +1,12 @@
 # Project Status — Symbios Site Rebuild
 
-**Date:** 2026-07-18
+**Date:** 2026-08-01
+
+## 2026-08-01 — robots.txt temporarily opened for reception.ai crawl
+- **Diagnosis confirmed:** the reception.ai crawl stalled after reading only the title/meta because the Render staging `robots.txt` served `Disallow: /`. reception.ai respects robots, so it never fetched past the root document.
+- **Flipped `Disallow: /` -> `Allow: /`** and pushed to `main` (commit `9aa8d92`) so Render redeploys and the crawl can complete. Risk is low: the staging URL isn't linked or submitted anywhere, and the sitemap directive already points at `www.mysymbios.com`, so Google isn't crawling the Render host.
+- Verified robots.txt is the **only** blocker — no `X-Robots-Tag` header config in the repo, and `noindex` appears only in `404.html` (intentional) and `SEO-REVIEW.md` (docs).
+- Repo re-cloned fresh to `C:\dev\Website-Symbios-` from `github.com/QuantumCoreMIP/Website-Symbios-`.
 
 ## 2026-07-18 — SymbiosHealth logo sizing, rest of site
 - Audited every SymbiosHealth lockup instance (25 across 15 files): **header** (9), **footer** (9), **brand strip** (6), **intro animation** (1).
@@ -74,9 +80,10 @@
 - All internal links verified (0 broken); per-brand phone numbers and CTAs verified against live site
 
 ## In progress
-- Nothing in flight
+- **robots.txt is temporarily open (`Allow: /`) on staging.** Waiting on the reception.ai crawl to finish, then it must be reverted to `Disallow: /`.
 
 ## Next steps
+- **REVERT robots.txt to `Disallow: /`** as soon as the reception.ai crawl completes — staging stays blocked until the domain cutover
 - Client review of flagged items (see README "Outstanding items"): Fit logo asset, Fit social handles, "Fit Rx" / "The Mobility Edge" naming, past-dated webinar on advanced-ed-solutions page, and whether to carry over UserWay / GA4 / header search / blog pagination
 - Migrate the 4 women's sexual-health treatment pages (FemiLift, O-Shot, Alma Duo for Enhanced Sexual Function, PRP Wing Lift) — tiles currently link to the live site
 - Decide hosting/domain for Fit (fit.mysymbios.com) and DNS cutover plan; forms now use the client's ActiveCampaign embeds, so no separate form backend is needed

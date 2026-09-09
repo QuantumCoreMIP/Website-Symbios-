@@ -1,6 +1,11 @@
 # Project Status — Symbios Site Rebuild
 
-**Date:** 2026-08-01
+**Date:** 2026-09-09
+
+## 2026-09-09 - site-wide em dash removal (`99c2dde`)
+- Removed all 112 em dashes across 42 deployed pages (literal U+2014 and `&mdash;`), including blog/article pages. Zero remain in non-`Reports/` HTML (independently re-verified).
+- Rule applied: spaced dashes in meta descriptions and headings (topic-to-detail separators) became colons; tight `word—word` dashes in body copy became commas. Spot-checked, reads cleanly. 113 en dashes in number ranges intentionally left intact per house style.
+- Client intel from a forwarded email (2026-09-09), acted on separately in a review for the user: their CMO is leaving (0 marketing staff soon), a CMO-started website redesign is due end of month, they are replacing FitBud + PatientNow + **ActiveCampaign with Zenoti** and adding HeadsUp, and they want a Thursday 2:30-3:00 call covering ongoing "site overlay" maintenance. **Open decision:** the proposal's forms are wired to ActiveCampaign embeds (ids 3/15/20/21), which the client is retiring; form integration must move to Zenoti (self-serve REST API, webhooks, booking widget, HIPAA-ready intake) before launch.
 
 ## 2026-08-01 — reception.ai crawl unblocked (robots.txt + sitemap, BOTH TEMPORARY)
 - **Root cause was misdirection, not exclusion.** The first theory (staging `robots.txt` serving `Disallow: /`) was wrong — flipping it to `Allow: /` (`9aa8d92`) changed nothing; the crawl still returned title/meta only. Render *did* redeploy, and `symbios.onrender.com` serves 200s with no anti-bot layer.

@@ -165,7 +165,7 @@ The legacy site splits authority across `theedge.` / `primarycare.` / `physiothe
 
 ### 9. Schema / Structured Data
 
-**In progress (main session):** per-brand LocalBusiness JSON-LD is now on the 5 index pages — `MedicalClinic` (root + primary care + physio), `ExerciseGym` (fit), `HealthAndBeautyBusiness` (medspa), each with correct per-brand phone, shared address, geo, hours, and `parentOrganization`. Two refinements to that work: (a) all five blocks use the same `image` (`symbioshealth_tagline.png`) — point each at its own brand logo; (b) on the root block, consider listing the four sub-brands via `department` (Google's documented pattern for co-located entities), which mirrors the GBP structure below.
+**In progress (main session):** per-brand LocalBusiness JSON-LD is now on the 5 index pages — `MedicalClinic` (root + primary care + physio), `ExerciseGym` (fit), `HealthAndBeautyBusiness` (medspa), each with correct per-brand phone, shared address, geo, hours, and `parentOrganization`. Two refinements to that work: (a) all five blocks use the same `image` (`symbiosmain_tagline.png`) — point each at its own brand logo; (b) on the root block, consider listing the four sub-brands via `department` (Google's documented pattern for co-located entities), which mirrors the GBP structure below.
 
 **Still needed (not yet present anywhere):**
 

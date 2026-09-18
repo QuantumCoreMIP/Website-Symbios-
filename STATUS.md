@@ -1,6 +1,11 @@
 # Project Status — Symbios Site Rebuild
 
-**Date:** 2026-09-09
+**Date:** 2026-09-18
+
+## 2026-09-18 - SymbiosHealth logo reverted to the client's original
+- The July 12 redraw (`d45a3bc`, `assets/symbioshealth_tagline.png`) set "Health" in Yellowtail and painted it at full opacity using the alpha-unmixed stroke color (#e80400), so it rendered fire-engine red instead of the brand coral (#f15b57; the original's strokes are #e80400 at ~65% alpha, which composites to #f05b58). The heavier script also matched the thin PrimaryCare/PhysioTherapy scripts worse, not better.
+- All 32 header, footer, intro, and JSON-LD references now point back to the client's own `/assets/wp/www.mysymbios.com/2021/12/symbiosmain_tagline.png` (identical across all five hosts). The redrawn file is removed. Same 430x107 dimensions, so no sizing changes.
+- Known flaw left as-is (it is their mark): the tail of the "H" dips into the tagline under "beautiful". That belongs with the vector cleanup already requested from their designer (see ToDoList).
 
 ## 2026-09-09 - site-wide em dash removal (`99c2dde`)
 - Removed all 112 em dashes across 42 deployed pages (literal U+2014 and `&mdash;`), including blog/article pages. Zero remain in non-`Reports/` HTML (independently re-verified).

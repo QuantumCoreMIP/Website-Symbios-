@@ -8,7 +8,7 @@
 - [ ] "PhysioTherapy" vs "SymbiosTherapy" — Dad's text said one word; logo reads
       PhysioTherapy. Confirm whether the brand itself is being renamed.
 - [ ] New SymbiosFit social profiles (current links still point to old Edge handles)
-- [ ] Vector versions of the SymbiosFit + fixed SymbiosHealth logos from designer
+- [ ] Vector versions of the SymbiosFit + SymbiosHealth logos from designer (Health: ask them to fix the H tail that dips into the tagline)
 
 ## Launch-critical (before DNS cutover to www.mysymbios.com)
 - [ ] Enter the 301 redirect rules from REDIRECTS.md (Render dashboard rules, or

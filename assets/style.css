@@ -1,30 +1,36 @@
+/* Zodiak (headline face per the Symbios brand guide), self-hosted from Fontshare under the ITF Free Font License */
+@font-face{font-family:'Zodiak';src:url('/assets/fonts/zodiak-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('/assets/fonts/zodiak-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('/assets/fonts/zodiak-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('/assets/fonts/zodiak-700-italic.woff2') format('woff2');font-weight:700;font-style:italic;font-display:swap;}
+
 /* Symbios Health — shared stylesheet (Symbios Fit rebrand build)
    Palette + type sourced from live site (Impreza theme custom props).
    Per-brand accents are set via a body class:
      .brand-main  — Symbios Health (coral)
-     .brand-fit   — Symbios Fit (taupe; darker taupe for headings/links)
+     .brand-fit   — SymbiosFit (brand-guide blue #2f6fa3; darker blue for headings/links)
      .brand-pc    — Primary Care (green)
      .brand-physio— Physio Therapy (magenta)
      .brand-aria  — Aria med spa (cyan; light gray page bg)
 */
 :root {
-  --brand: #F15C58;          /* buttons, topbar CTA, accent bands */
-  --brand-deep: #F15C58;     /* headings h3/h4/h6, links */
+  --brand: #f15b57;          /* buttons, topbar CTA, accent bands */
+  --brand-deep: #f15b57;     /* headings h3/h4/h6, links */
   --color-bg: #F1ECE8;       /* cream (header + alt sections) */
   --color-content-bg: #ffffff;
   --color-heading: #121212;
   --color-text: #4d4c4d;
   --color-text-soft: #494949;
-  --color-header-text: #4D585A;
+  --color-header-text: #4e5859;
   --color-border: #d6d6d6;
   --color-btn-dark: #4a4a4a;
   --font-body: 'Montserrat', sans-serif;
-  --font-heading: 'Cormorant Garamond', serif;
+  --font-heading: 'Zodiak', 'Cormorant Garamond', serif;
 }
-body.brand-fit    { --brand: #A29382; --brand-deep: #786c5f; }
-body.brand-pc     { --brand: #4EA647; --brand-deep: #4EA647; }
-body.brand-physio { --brand: #A81A8D; --brand-deep: #A81A8D; }
-body.brand-aria   { --brand: #1BBED5; --brand-deep: #1BBED5; --color-bg: #f0f0f0; }
+body.brand-fit    { --brand: #2f6fa3; --brand-deep: #25598a; }
+body.brand-pc     { --brand: #4fa317; --brand-deep: #4fa317; }
+body.brand-physio { --brand: #a7228b; --brand-deep: #a7228b; }
+body.brand-aria   { --brand: #08bed5; --brand-deep: #08bed5; --color-bg: #f0f0f0; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -71,7 +77,7 @@ html.intro-lock { overflow: hidden; scrollbar-gutter: stable; }
 /* word-by-word tagline */
 .intro-tag { position: absolute; top: 34%; left: 50%; transform: translateX(-50%); width: min(90vw, 820px); text-align: center; font-family: var(--font-heading); font-size: clamp(1.7rem, 4.5vw, 2.9rem); line-height: 1.25; color: #121212; text-wrap: balance; }
 .intro-tag .w { display: inline-block; opacity: 0; transform: translateY(16px); }
-.intro-tag .w.em { font-style: italic; color: var(--brand, #F15C58); }
+.intro-tag .w.em { font-style: italic; color: var(--brand, #f15b57); }
 .intro.run .intro-tag .w { animation: introWord .65s cubic-bezier(.2,.7,.2,1) forwards; }
 .intro.run .intro-tag .w:nth-child(1) { animation-delay: 6.45s; }
 .intro.run .intro-tag .w:nth-child(2) { animation-delay: 6.55s; }

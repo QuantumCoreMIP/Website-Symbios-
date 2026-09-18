@@ -2,6 +2,13 @@
 
 **Date:** 2026-09-18
 
+## 2026-09-18 - brand guide pass (client's Symbios Brand Guide, 11 pages, saved to Brand/)
+- Colors: style.css and the two inline spots (home doors, 404 buttons) now use the guide's exact hex values: coral #f15b57, green #4fa317, magenta #a7228b, cyan #08bed5, slate #4e5859. Previously each was a near-miss (#F15C58, #4EA647, #A81A8D, #1BBED5, #4D585A).
+- SymbiosFit: the guide's Fit brand is blue #2f6fa3 (taupe #a39383 is only its gradient background) and its Fit logo is a blue brush script with no tagline. Replaced our Edge-derived taupe logo with the guide's own artwork (`assets/symbiosfit_logo.png`, 1543x346, 31 refs) and set `body.brand-fit` to #2f6fa3 / deep #25598a. The old `symbiosfit_tagline.png` files stay in assets but are unreferenced.
+- Headline type: the guide specifies Zodiak, which is free on Fontshare (ITF Free Font License). Self-hosted 400/700 + italics in `assets/fonts/` with @font-face; `--font-heading` is now Zodiak with Cormorant Garamond as fallback. Body stays Montserrat as the stand-in for Gotham (paid).
+- Copy: 15 leftover "MedSpa by Symbios" mentions on the med spa pages and blog changed to SymbiosAria; the blog's quoted tagline now matches the guide's "Healthy, fit and beautiful for life".
+- Guide findings for the client (not fixable on our side): logos are raster only (max 1543 px wide, about 5 in at 300 dpi), no Pantone, no CMYK for Fit blue, hex and CMYK pairs do not round-trip (cyan and green shift visibly), the Zodiak and Futuristic Stylish specimens in the guide are actually set in Montserrat and IBM Plex Sans Condensed, and the mood boards use watermarked Shutterstock comps. Higher-resolution lockups extracted from the guide are in `Brand/guide-logo-exports/`.
+
 ## 2026-09-18 - SymbiosHealth logo reverted to the client's original
 - The July 12 redraw (`d45a3bc`, `assets/symbioshealth_tagline.png`) set "Health" in Yellowtail and painted it at full opacity using the alpha-unmixed stroke color (#e80400), so it rendered fire-engine red instead of the brand coral (#f15b57; the original's strokes are #e80400 at ~65% alpha, which composites to #f05b58). The heavier script also matched the thin PrimaryCare/PhysioTherapy scripts worse, not better.
 - All 32 header, footer, intro, and JSON-LD references now point back to the client's own `/assets/wp/www.mysymbios.com/2021/12/symbiosmain_tagline.png` (identical across all five hosts). The redrawn file is removed. Same 430x107 dimensions, so no sizing changes.

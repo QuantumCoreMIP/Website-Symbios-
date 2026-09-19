@@ -1,0 +1,72 @@
+{
+ "SymbiosHealth": {
+  "url": "https://www.mysymbios.com/",
+  "title": "Home - Symbios Health",
+  "logo": {
+   "src": "https://www.mysymbios.com/wp-content/uploads/2021/12/symbiosmain_tagline.png",
+   "w": 430,
+   "h": 107,
+   "cw": 321,
+   "ch": 80,
+   "alt": ""
+  },
+  "file": "C:\\dev\\Clients\\Symbios\\Brand\\live-site-logos-2026-09-19\\SymbiosHealth_live.png",
+  "status": 200
+ },
+ "PrimaryCare": {
+  "url": "https://primarycare.mysymbios.com/",
+  "title": "Primary Care by Symbios Health \u2013 Primary Care Providers on Hilton Head Island",
+  "logo": {
+   "src": "https://primarycare.mysymbios.com/wp-content/uploads/2025/10/symbiosprimarycare_tagline.png",
+   "w": 345,
+   "h": 107,
+   "cw": 322,
+   "ch": 100,
+   "alt": ""
+  },
+  "file": "C:\\dev\\Clients\\Symbios\\Brand\\live-site-logos-2026-09-19\\PrimaryCare_live.png",
+  "status": 200
+ },
+ "PhysioTherapy": {
+  "url": "https://physiotherapy.mysymbios.com/",
+  "title": "Physio Therapy by Symbios Health \u2013 Physical Therapy on Hilton Head Island",
+  "logo": {
+   "src": "https://physiotherapy.mysymbios.com/wp-content/uploads/2021/12/symbiosphysio_tagline.png",
+   "w": 345,
+   "h": 107,
+   "cw": 322,
+   "ch": 100,
+   "alt": ""
+  },
+  "file": "C:\\dev\\Clients\\Symbios\\Brand\\live-site-logos-2026-09-19\\PhysioTherapy_live.png",
+  "status": 200
+ },
+ "SymbiosFit": {
+  "url": "https://theedge.mysymbios.com/",
+  "title": "SymbiosEdge by Symbios Health \u2013 Everyday Living Programs on Our One-of-Kind Campus",
+  "logo": {
+   "src": "https://theedge.mysymbios.com/wp-content/uploads/2021/12/symbiosedge_tagline.png",
+   "w": 345,
+   "h": 107,
+   "cw": 322,
+   "ch": 100,
+   "alt": ""
+  },
+  "file": "C:\\dev\\Clients\\Symbios\\Brand\\live-site-logos-2026-09-19\\SymbiosFit_live.png",
+  "status": 200
+ },
+ "SymbiosAria": {
+  "url": "https://medspa.mysymbios.com/",
+  "title": "Symbios Aria \u2013 Medical Spa on Hilton Head Island",
+  "logo": {
+   "src": "https://medspa.mysymbios.com/wp-content/uploads/2025/10/arialogo-1.png",
+   "w": 359,
+   "h": 107,
+   "cw": 336,
+   "ch": 100,
+   "alt": ""
+  },
+  "file": "C:\\dev\\Clients\\Symbios\\Brand\\live-site-logos-2026-09-19\\SymbiosAria_live.png",
+  "status": 200
+ }
+}

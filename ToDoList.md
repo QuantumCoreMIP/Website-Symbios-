@@ -8,7 +8,7 @@
 - [ ] "PhysioTherapy" vs "SymbiosTherapy" — Dad's text said one word; logo reads
       PhysioTherapy. Confirm whether the brand itself is being renamed.
 - [ ] New SymbiosFit social profiles (current links still point to old Edge handles)
-- [ ] **Nine logo/tagline decisions** sent to Dr. Luther 2026-09-19 in Brand/Symbios-Logo-Decisions.pdf (green/cyan values, tagline or bare headers, stacked Health, tagline alignment, Care/Align taglines, Align/Care pages, Edge retirement, H tail, vector masters). Do not pre-empt; see CONTEXT.md.
+- [ ] **Nine logo/tagline decisions** sent to Dr. Luther 2026-09-19 in Brand/Symbios-Logo-Decisions.pdf (green/cyan values, tagline or bare headers, stacked Health, tagline alignment, Care/Align taglines, Align/Care pages, Edge retirement, H tail, vector masters). Do not pre-empt; see the Start here section of README.md.
 - [ ] When decision 1 comes back (expected: artwork values), set `body.brand-pc` to #4ea647 and `body.brand-aria` to #1bbed5 in assets/style.css, plus the inline --door values on index.html and the 404 buttons
 - [ ] When decision 2 confirms the tagline layout, swap header logo files for the 2000 px versions in Brand/approved-logos-darla-2026-09-19/ (retina sharpness; note the zip's Health/PrimaryCare/Physio/Fit files have no tagline, so this depends on the answer)
 - [ ] If decision 6 says yes: SymbiosAlign and SymbiosCare landing pages in the campus nav

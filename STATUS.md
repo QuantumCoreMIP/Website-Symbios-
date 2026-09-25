@@ -1,6 +1,20 @@
 # Project Status — Symbios Site Rebuild
 
-**Date:** 2026-09-18
+**Date:** 2026-09-25
+
+## 2026-09-25 (later) - homepage polish on the PR branch + Render PR preview
+- Preview: Render PR previews are set to Manual, so PR #1 carries the `render-preview` label (label created in the repo). Preview URL https://symbios-pr-1.onrender.com rebuilds on every push to `darla-voice-and-align`; staging robots.txt still blocks indexing. symbios.onrender.com still serves main.
+- `d8fc8f8`: Seven Essentials rebuilt as an orbit diagram after Darla's layout (Symbios mark in the center, seven points on a ring, label beside each point; dotted vertical list under 980px). Practice cards: the five-card band widens to 1440px on large screens, rows line up across cards via CSS subgrid, tighter list spacing, divider above each list, "GLP-1" kept on one line. Checked at 1780/1440/1280/1024/768/390: no horizontal scroll, no console errors; static audit unchanged (only the 29 old blog-post links).
+- Client-facing review PDF (`Reports/Final Reports/Symbios-New-Website-Review.pdf`, not in git) gained a "Photos and video" section: launch with either current or new-site photos, optional photographer shoot added later, recommended homepage hero video from the same shoot, photo releases for anyone pictured, license check on any stock images.
+- Next: client review of the preview; then the open items in the entry below (blog migration first). The review PDF's comparison row "Old wording from the current site" is now stale; awaiting Nick's OK to update it.
+
+## 2026-09-25 - Darla's brand voice moved onto the rebuild + SymbiosAlign page (branch `darla-voice-and-align`, PR only, not merged)
+- Source: Kirchner Marketing's redesign on staging (johntestt.kinsta.cloud), copy archived verbatim in `Brand/darla-site-copy-2026-09-25/`. Her wording, headings, FAQs, patient quotes, Seven Essentials, stats, care team, and "Sym is together. Bios is life." story now live on: home, About (now "Our Story"), Request an Appointment, and the PrimaryCare, PhysioTherapy, SymbiosFit, and SymbiosAria landing pages. Service subpages keep their existing content.
+- New pages: `/symbiosalign/` (full 12-week program page, FAQ + MedicalWebPage schema, SymbiosAlign logo from the approved zip) and `/services/` (hub with all five services, "what you get / this is for you if" lists, FAQ). SymbiosAlign added to the campus bar, Our Campus menu, every logo strip, the home door grid (5 doors), sitemap, and llms.txt.
+- Edits to her copy, on purpose: "SymbiosCare" as the primary-care brand corrected to PrimaryCare (SymbiosCare is the membership); "Symbios ARIA" to SymbiosAria; "4 areas of care" to 5 (Align is now a door); dead buttons wired (Ask About SymbiosAlign goes to Victoria's Microsoft Bookings link); hyphen dashes removed.
+- SEO: canonical + Open Graph + Twitter tags on all 49 pages; titles <=65 and descriptions 70 to 160 on every page; heading-level skips fixed site-wide (61 headings re-leveled with look-alike classes, no visual change); FAQPage schema on 6 pages, all visible on page; `<main>` landmark and skip link on every page. Lighthouse mobile with a launch robots.txt: SEO 100 on all 8 pages tested, accessibility 96 to 100.
+- Accessibility: `--brand-deep` (text-only coral) darkened #f15b57 to #bd3d39 so coral text passes AA on white and cream; buttons, bands, and logos keep #f15b57. Inline links underlined.
+- Still open (flagged in the PR): white text on coral/green/cyan buttons is below AA (green/cyan frozen until Dr. Luther's color decision); blog cards still link to posts on the live WordPress site and will 404 at cutover unless posts are migrated; request form is still ActiveCampaign; first-visit intro animation delays mobile LCP on home; Align phone number (4800 vs 4000) and Darla's stats (8,245+ reviews, 34+ years) to confirm with the client.
 
 ## 2026-09-19 - client sent the approved logo set and a women's health messaging draft
 - Dr. Luther replied to the brand-guide email with `Symbios Health Logos Darla.zip` (six PNGs, 2000x667, transparent, about 6.7 in at 300 dpi) and said the brand work was three months with Darla (Kirchner Marketing). Still raster, no vector. Saved to `Brand/approved-logos-darla-2026-09-19/`.

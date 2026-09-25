@@ -1,7 +1,10 @@
 # Symbios Health
 
-> Integrated health and wellness campus at 460 William Hilton Parkway, Hilton Head
-> Island, SC 29926. Four practices, one connected care team.
+> Physician-led practice at 460 William Hilton Parkway, Hilton Head Island, SC 29926,
+> founded by Dr. Stephen Luther, MD (practicing since 1992). Relationship-based primary
+> care, medically guided weight loss, physical therapy, fitness, and regenerative
+> aesthetics working from one connected plan. Serving Hilton Head, Bluffton, Sun City,
+> and the Lowcountry. Accepting new patients.
 
 ## The campus brands
 - [SymbiosHealth](/): campus home and main practice. Tel (843) 738-4800.
@@ -9,13 +12,17 @@
   and women's health, nutrition, sick care. Tel (843) 738-4800.
 - [PhysioTherapy](/physiotherapy/): pain & injury rehabilitation, sports recovery,
   pre/post-surgical care, pelvic floor, lymphedema. Tel (843) 738-4300.
-- [SymbiosFit](/fit/): Everyday Living Programs — comprehensive assessments, healthy
+- [SymbiosFit](/fit/): strength, balance, and mobility training built around your health history: comprehensive assessments, healthy
   weight loss, golf/tennis/pickleball health, women's wellness. Tel (843) 738-4600.
   Located nearby at Port Royal Plaza, 95 Mathews Dr, Suite D3, Hilton Head Island, SC 29926.
-- [SymbiosAria](/medspa/): physician-led med spa by Dr. Stephen Luther — facials,
-  injectables, Vampire Facials (PRP), body contouring. Tel (843) 738-4000.
+- [SymbiosAria](/medspa/): physician-led aesthetic and regenerative care in a clinical
+  setting: injectables, PRP, laser, skin tightening, facials, medical-grade skincare. Tel (843) 738-4000.
+- [SymbiosAlign](/symbiosalign/): 12-week, physician-led weight loss program with medical
+  oversight, nutrition, movement, body composition tracking, and GLP-1 support when
+  appropriate. Tel (843) 738-4800.
 
 ## Key pages
+- [All services](/services/)
 - [Request an appointment](/request-an-appointment/)
 - [PrimaryCare consultation](/primary-care/request-a-consultation/)
 - [Aria med spa consultation](/medspa/request-a-consultation/)

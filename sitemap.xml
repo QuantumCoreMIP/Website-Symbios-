@@ -47,4 +47,6 @@
   <url><loc>https://www.mysymbios.com/primary-care/womens-healthcare/</loc></url>
   <url><loc>https://www.mysymbios.com/privacy-policy/</loc></url>
   <url><loc>https://www.mysymbios.com/request-an-appointment/</loc></url>
+  <url><loc>https://www.mysymbios.com/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.mysymbios.com/symbiosalign/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
